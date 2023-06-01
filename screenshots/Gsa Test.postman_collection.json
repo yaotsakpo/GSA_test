@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "6fcc4ab1-67d8-4b9c-a70d-cdde60ca185a",
+		"name": "Gsa Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Add Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"elom\",\n    \"contactPhone\": \"001-111-1111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/supplier/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"supplier",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"manu\",\n    \"contactPhone\": \"222-222-2222\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/supplier/update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"supplier",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/supplier/get/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"supplier",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/supplier",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/supplier/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"supplier",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/product",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/product/get/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a product by supplierID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/product/bySupplier/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product",
+								"bySupplier",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"new_rice\",\n    \"unitPrice\": 6000,\n    \"quantityInStock\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/product/update/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete supplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/product/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"rice\",\n    \"unitPrice\": 5000,\n    \"quantityInStock\": 2,\n    \"supplierId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/product/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
